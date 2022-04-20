@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #map {
+            width: 60%;
+            height: 400px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>Google maps demo</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At beatae, delectus dolore ipsam eveniet nihil sequi libero facilis sint enim nemo quam, ipsa impedit nobis laboriosam qui! 
+    In reiciendis eius tempora omnis accusamus. Enim fuga repudiandae hic corporis voluptates velit doloremque quasi rerum non tempora. Odio alias a possimus ipsam!</p>
+    <!--div element for the Map-->
+    <div id="map"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad perferendis odit ipsa! Maxime neque odit architecto expedita. 
+        In obcaecati beatae labore eos soluta molestias? Expedita, dolore voluptas, vel nulla quasi explicabo, fuga vitae quas molestiae nostrum necessitatibus fugit dolor. 
+        Atque voluptatum eveniet ex quo. Voluptatem libero quam nulla ducimus cumque, voluptate quibusdam dolorum ad omnis harum dicta explicabo, 
+        a ab rerum magni nisi quod sunt quos delectus impedit accusantium magnam!</p>
+</body>
+<script>
+    function initMap() {
+        let map_coordinates = {lat: -1.286389, lng:-36.817223};
+        //Map options - defines the properties for the map
+        let mapOptions = {
+            // center property specifies where to center the map (using latitude and longitude coordinates).
+            center: map_coordinates,
+            // zoom property specifies the zoom level for the map
+            zoom: 2
+        };
+        //New Map
+        // creates a new map inside the <div> element with id="map", using the parameters that are passed (mapProp).
+        // The Map() constructor creates a new map inside a specified HTML element
+        let googlemap = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+        //Add marker - 
+        let marker = new google.maps.Marker({
+                position: {lat: 18.079021, lng: -15.965662},
+                map: googlemap,
+
+            });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbsTePqajM2MPxXOF6UH_zVTGrn3QnTcY&callback=initMap">
+</script>
+
+</html>

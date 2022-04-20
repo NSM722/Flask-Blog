@@ -1,0 +1,33 @@
+""" 
+pip install flask
+pip install flask-wtf
+pip install flask-sqlalchemy
+pip install flask-bcrypt
+pip install wheel # This is required so that the command from 'flask_bcrypt install Bcrypt' can work
+pip install flask-login
+pip install Pillow
+pip install flask-mail
+
+
+
+It's best to use a set of random characters as the secret key and for this one needs to 
+import secrets module from the command line/python interpreter below are the steps
+step one type python
+step 2 type import secrets
+step 3 type secrets.token_hex(16) --here 16 represents the numbers of bytes
+step 4 copy the secret key and exit the interpreter
+
+
+When using forms one needs to set a secret key for the application 
+which protects against modified cookies and cross site request forgery(CSRF) attacks
+This key is set in the application file in this case my 'flaskblog.py' file. 
+
+The form. hidden_tag() template argument generates a hidden field that includes a token that is used to protect the form against CSRF attacks. 
+All you need to do to have the form protected is include this hidden field and have the SECRET_KEY variable defined in the Flask configuration.
+If your form has multiple hidden fields, you can render them in one block using hidden_tag().
+
+**APP REQUIREMENTS!!!!!!!**
+Reading from a database and modifying the database.
+Since we're inserting stuff from the user into the database, we need to handle for SQL injection attempts.
+Handle sessions / cookies so that the user stays logged in and we actually know who is interacting with the website.
+Need a register page, a login page, a logout page. """
