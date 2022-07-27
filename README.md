@@ -1,4 +1,8 @@
 # Flask-Blog Web Application
+## Activate virtual environment on windows using the following command example:
+```python
+C:\Users\'Username'\venv\Scripts\activate.bat
+```
 ### Overview
 The project entails:
 * Getting started with creating a Flask app
